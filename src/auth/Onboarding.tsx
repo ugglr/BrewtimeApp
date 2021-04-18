@@ -1,23 +1,19 @@
 import React, {useRef} from 'react';
 import {StyleSheet, Dimensions, Animated} from 'react-native';
-
-import Slide from './components/Slide';
-
-import * as colors from '../colors';
 import {getTranslations, AvailableLocales} from '../locale';
 
+import {Slide} from './components';
+import * as colors from '../colors';
+
 const {width} = Dimensions.get('screen');
+const {onboardingTranslations} = getTranslations(AvailableLocales.en);
 
 const styles = StyleSheet.create({
   container: {
     height: '100%',
     width,
   },
-  controlContainer: {},
-  leftButtonContainer: {},
 });
-
-const {onboardingTranslations} = getTranslations(AvailableLocales.en);
 
 const slides = [
   {
