@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
 import {ActionButton} from '../../components/basic';
 
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row-reverse',
     height: 80,
     bottom: 40,
-    right: layout.sideMargin.xl,
+    right: layout.margins.xl,
   },
 });
 

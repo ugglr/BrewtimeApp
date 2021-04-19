@@ -1,15 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 
 import BrewCard from './BrewCard';
 
 import * as fonts from '../../fonts';
 import * as colors from '../../colors';
 import * as layout from '../../layout';
+import {BrewType} from '../../types';
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: layout.sideMargin.xl,
+    flexGrow: 1,
+    paddingHorizontal: layout.margins.xl,
   },
   titleContainer: {
     alignItems: 'center',
@@ -17,21 +19,29 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   title: {
-    marginBottom: 20,
     marginTop: 20,
     textDecorationLine: 'underline',
     textDecorationColor: colors.brown,
   },
 });
 
-const BrewsList = () => {
+type Props = {
+  data: Array<BrewType>;
+};
+
+const BrewsList = ({data}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
         <Text style={[fonts.H2, styles.title]}>Brews.</Text>
       </View>
 
-      <BrewCard />
+      <FlatList
+        data={data}
+        renderItem={({item: {brewMethod, brewDate}}) => (
+          <BrewCard {...{brewMethod, brewDate}} />
+        )}
+      />
     </View>
   );
 };
