@@ -12,7 +12,7 @@ import {AntIcon, Button} from '../../components/basic';
 
 import * as colors from '../../colors';
 import * as fonts from '../../fonts';
-import * as responsive from '../../responsive';
+import * as layout from '../../layout';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   bodyContainer: {
     width,
-    paddingHorizontal: responsive.sideMargin.xl,
+    paddingHorizontal: layout.sideMargin.xl,
     top: -36,
   },
   body: {

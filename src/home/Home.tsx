@@ -1,13 +1,14 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
-import {Greeting} from './components';
+import {BrewsList, Greeting, Footer} from './components';
 
-import {whiteShadow} from '../colors';
+import * as colors from '../colors';
+import * as layout from '../layout';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: whiteShadow,
+    backgroundColor: colors.whiteShadow,
     flex: 1,
   },
 });
@@ -16,6 +17,8 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Greeting />
+      <BrewsList />
+      <Footer />
     </View>
   );
 };

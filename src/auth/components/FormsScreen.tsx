@@ -7,7 +7,7 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-import {sideMargin} from '../../responsive';
+import {sideMargin} from '../../layout';
 
 import * as fonts from '../../fonts';
 import * as colors from '../../colors';

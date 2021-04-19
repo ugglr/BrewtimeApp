@@ -4,3 +4,7 @@ export const sideMargin = {
   l: 20,
   xl: 24,
 };
+
+export const padding = {
+  m: 16,
+};
