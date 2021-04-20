@@ -1,9 +1,8 @@
 import React from 'react';
-
-import FormsScreen from './components/FormsScreen';
-import LoginForm from './forms/LoginForm';
-
 import {getTranslations, AvailableLocales} from '../locale';
+
+import {FormsScreen} from './components';
+import LoginForm from './forms/LoginForm';
 
 const {loginScreenTranslations} = getTranslations(AvailableLocales.en);
 

@@ -1,8 +1,17 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 
+export type AntIcons =
+  | 'left'
+  | 'right'
+  | 'rest'
+  | 'close'
+  | 'eye'
+  | 'eyeo'
+  | 'plus';
+
 type AntIconProps = {
-  name: 'left' | 'right' | 'rest' | 'close' | 'eye' | 'eyeo';
+  name: AntIcons;
   color: string;
   size: number;
 };

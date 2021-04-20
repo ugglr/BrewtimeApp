@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
 
 import * as colors from '../../colors';
