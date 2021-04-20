@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 import * as colors from '../../colors';
 import * as layout from '../../layout';
@@ -15,13 +15,19 @@ const styles = StyleSheet.create({
   },
 });
 
-const BrewCard = ({brewMethod, brewDate}: types.BrewType) => {
+type Props = {
+  brewMethod: types.BrewMethods;
+  brewDate: string;
+  onPress: () => void;
+};
+
+const BrewCard = ({brewMethod, brewDate, onPress}: Props) => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Text>BrewCard</Text>
       <Text>{brewMethod}</Text>
       <Text>{brewDate}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

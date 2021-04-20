@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     height: height * 0.22,
     justifyContent: 'flex-end',
     paddingBottom: 36,
-    paddingHorizontal: layout.sideMargin.xl,
+    paddingHorizontal: layout.margins.xl,
   },
   title: {
     color: colors.whiteShadow,
@@ -28,8 +28,12 @@ const styles = StyleSheet.create({
 const Greeting = () => {
   return (
     <View style={styles.container}>
-      <Text style={[fonts.H2, styles.title]}>Hello 👋</Text>
-      <Text style={[fonts.P, styles.subtitle]}>What are we brewing today?</Text>
+      <View>
+        <Text style={[fonts.H2, styles.title]}>Hello 👋</Text>
+        <Text style={[fonts.P, styles.subtitle]}>
+          What are we brewing today?
+        </Text>
+      </View>
     </View>
   );
 };

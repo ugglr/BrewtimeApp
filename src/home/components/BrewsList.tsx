@@ -32,15 +32,12 @@ type Props = {
 const BrewsList = ({data}: Props) => {
   return (
     <View style={styles.container}>
-      <View style={styles.titleContainer}>
-        <Text style={[fonts.H2, styles.title]}>Brews.</Text>
-      </View>
-
       <FlatList
         data={data}
         renderItem={({item: {brewMethod, brewDate}}) => (
           <BrewCard {...{brewMethod, brewDate}} />
         )}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );

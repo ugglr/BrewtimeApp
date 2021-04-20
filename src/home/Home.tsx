@@ -24,6 +24,38 @@ const BREWS: Array<BrewType> = [
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
+  {
+    brewMethod: 'pour-over',
+    brewDate: '2020-12-12',
+  },
 ];
 
 const styles = StyleSheet.create({
