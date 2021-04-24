@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 
-import {AntIcon, Button} from '../../components/basic';
+import {AntIcon, Button} from '../../basic';
 
 import * as colors from '../../colors';
 import * as fonts from '../../fonts';
