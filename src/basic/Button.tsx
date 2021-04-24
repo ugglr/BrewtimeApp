@@ -2,7 +2,7 @@ import React, {ReactElement} from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
 
-import * as colors from '../../colors';
+import * as colors from '../colors';
 
 const styles = StyleSheet.create({
   container: {

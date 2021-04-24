@@ -9,6 +9,9 @@ import Login from './src/auth/Login';
 import SignUp from './src/auth/SignUp';
 // App Screens
 import Home from './src/home/Home';
+import Brew from './src/brew/Brew';
+import BrewDetails from './src/brew/BrewDetails';
+import Account from './src/account/Account';
 
 const MainStack = createStackNavigator();
 
@@ -19,12 +22,17 @@ export default function App() {
     <NavigationContainer>
       <MainStack.Navigator headerMode="none">
         {isSignedIn ? (
-          <MainStack.Screen name="home" component={Home} />
+          <>
+            <MainStack.Screen name="home" component={Home} />
+            <MainStack.Screen name="brew" component={Brew} />
+            <MainStack.Screen name="brew-details" component={BrewDetails} />
+            <MainStack.Screen name="account" component={Account} />
+          </>
         ) : (
           <>
             <MainStack.Screen name="onboarding" component={Onboarding} />
             <MainStack.Screen name="login" component={Login} />
-            <MainStack.Screen name="signUp" component={SignUp} />
+            <MainStack.Screen name="sign-up" component={SignUp} />
           </>
         )}
       </MainStack.Navigator>

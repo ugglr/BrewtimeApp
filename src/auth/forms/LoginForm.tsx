@@ -2,8 +2,8 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Formik} from 'formik';
 
-import TextInput from '../../components/forms/TextInput';
-import Button from '../../components/basic/Button';
+import TextInput from '../../forms/TextInput';
+import Button from '../../basic/Button';
 
 import {getTranslations, AvailableLocales} from '../../locale';
 

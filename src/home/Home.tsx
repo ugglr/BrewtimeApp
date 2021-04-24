@@ -2,57 +2,44 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {BrewType} from '../types';
 
-import {BrewsList, Greeting, Footer} from './components';
+import {BrewsList, Greeting} from './components';
+import {ActionButton} from '../basic';
 
 import * as colors from '../colors';
-import * as layout from '../layout';
 
 const BREWS: Array<BrewType> = [
   {
+    id: 1,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
   {
+    id: 2,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
   {
+    id: 3,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
   {
+    id: 4,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
   {
+    id: 5,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
   {
+    id: 6,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
   {
-    brewMethod: 'pour-over',
-    brewDate: '2020-12-12',
-  },
-  {
-    brewMethod: 'pour-over',
-    brewDate: '2020-12-12',
-  },
-  {
-    brewMethod: 'pour-over',
-    brewDate: '2020-12-12',
-  },
-  {
-    brewMethod: 'pour-over',
-    brewDate: '2020-12-12',
-  },
-  {
-    brewMethod: 'pour-over',
-    brewDate: '2020-12-12',
-  },
-  {
+    id: 7,
     brewMethod: 'pour-over',
     brewDate: '2020-12-12',
   },
@@ -63,14 +50,20 @@ const styles = StyleSheet.create({
     backgroundColor: colors.whiteShadow,
     flex: 1,
   },
+  actionMenuContainer: {
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
+  },
 });
 
-const Home = () => {
+const Home = ({navigation, route}) => {
   return (
     <View style={styles.container}>
-      <Greeting />
-      <BrewsList data={BREWS} />
-      <Footer />
+      <BrewsList data={BREWS} {...{navigation, route}} />
+      <View style={styles.actionMenuContainer}>
+        <ActionButton onPress={() => navigation.navigate('brew')} icon="plus" />
+      </View>
     </View>
   );
 };

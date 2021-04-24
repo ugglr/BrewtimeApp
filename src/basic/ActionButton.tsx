@@ -4,13 +4,15 @@ import {RectButton} from 'react-native-gesture-handler';
 
 import AntIcon, {AntIcons} from './AntIcon';
 
-import * as colors from '../../colors';
+import * as colors from '../colors';
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: colors.brown,
     borderRadius: 40,
+    borderWidth: 1,
+    borderColor: colors.white,
     height: 80,
     justifyContent: 'center',
     width: 80,

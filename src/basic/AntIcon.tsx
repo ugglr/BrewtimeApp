@@ -8,7 +8,8 @@ export type AntIcons =
   | 'close'
   | 'eye'
   | 'eyeo'
-  | 'plus';
+  | 'plus'
+  | 'user';
 
 type AntIconProps = {
   name: AntIcons;
